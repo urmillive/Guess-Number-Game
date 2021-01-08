@@ -1,6 +1,7 @@
 """
     This is Very Simple Guess Number Game,
-    you've only 
+    you've only need to guess random number and computer also guess number and if 
+    it's match then you won otherwise not.
 """
 import random
 
