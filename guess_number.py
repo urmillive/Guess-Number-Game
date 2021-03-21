@@ -4,27 +4,27 @@
     it's match then you won otherwise not.
 """
 import random
+def guess_the_number():
+    dream_number = random.randint(0,25)
+    no_of_guesses = 5
 
-def game():
-    computer_no = random.randint(0, 20)
-    print("Hello Coder you're enter in Game")
-    print("you\'ve only 5 change for won this game")
-    x = 5
-    while x > 0:
-        guess_number = int(input("Enter you number : "))
-        if (guess_number < computer_no):
-            print("Please Enter greater number")
-        elif (guess_number > computer_no):
-            print("Please Enter Small number")
-        elif (guess_number == computer_no):
-            print("********You won the Match**********")
+    print("enter number between 0 to 25")
+    while no_of_guesses>0:
+        n = int(input("Enter your Number : "))
+        if n > dream_number:
+            print("your number is greater than dream number 😌")
+        elif n < dream_number:
+            print("your number is less than dream number 😌")
+        elif n == dream_number:
+            print("congratulations you win 👏")
+            print(f"you completed game with {no_of_guesses} chance 😎")
             break
-        else:
-            print("Sorry you lose this game")
 
-        x = x - 1
-        print("you\'ve only", x, "chance")
+        print(f"you have only {no_of_guesses-1} chances left")
+        no_of_guesses-=1
+    else:
+        print("Game Over💀")
+            
 
-
-if __name__ == "__main__":
-    game()
+if __name__=="__main__":
+    guess_the_number()
